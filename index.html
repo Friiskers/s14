@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STALKER Profile – Grisha Lyonya</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', monospace;
+      color: #ddd;
+      background-color: black;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1605211801558-4f77e1ee6d8f?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(0.4);
+      z-index: -1;
+    }
+
+    .overlay {
+      background-color: rgba(20, 20, 20, 0.85);
+      min-height: 100vh;
+      padding: 3rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      max-width: 900px;
+      width: 100%;
+      background: rgba(15, 15, 15, 0.95);
+      border: 2px solid #7fbf7f;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #7fbf7f;
+    }
+
+    h1 {
+      color: #7fbf7f;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      color: #aaa;
+      font-weight: normal;
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section {
+      margin-bottom: 1.5rem;
+    }
+
+    .label {
+      color: #888;
+      font-weight: bold;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    .value {
+      font-size: 1.1rem;
+      margin-top: 0.2rem;
+    }
+
+    .inventory {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .badge {
+      background-color: #222;
+      padding: 0.5rem 1rem;
+      border: 1px solid #7fbf7f;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
+
+    .portrait {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .portrait img {
+      width: 200px;
+      border-radius: 10px;
+      border: 2px solid #7fbf7f;
+    }
+
+    .links {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .links a {
+      color: #7fbf7f;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://files.catbox.moe/7lbpff.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="overlay">
+    <div class="card">
+      <div class="portrait">
+        <img src="https://i.imgur.com/yAdHa5G.png" alt="Loner Patch" />
+      </div>
+
+      <h1>Grisha Lyonya</h1>
+      <h2>Rookie Stalker – Chernobyl Exclusion Zone</h2>
+
+      <div class="section">
+        <div class="label">Origin</div>
+        <div class="value">Born in Ukraine</div>
+      </div>
+
+      <div class="section">
+        <div class="label">Affiliation</div>
+        <div class="value">Loner / Rookie</div>
+      </div>
+
+      <div class="section">
+        <div class="label">Profession</div>
+        <div class="value">Scavenger, Artifact Hunter, Survivor</div>
+      </div>
+
+      <div class="section">
+        <div class="label">Philosophy</div>
+        <div class="value">“The Zone gives, the Zone takes. You just better be quick enough to take before it does.”</div>
+      </div>
+
+      <div class="section">
+        <div class="label">Background</div>
+        <div class="value">
+          Grisha Lyonya grew up on the outskirts of Kyiv, listening to stories of the forbidden Zone whispered by drunk
+          soldiers and half-crazy wanderers. After the war and hardship left his life in ruins, he turned his eyes to the
+          north — to Chernobyl — chasing the rumors of glowing riches, forgotten bunkers, and artifacts that could bend
+          reality. Equipped with a cheap Geiger counter and an aging AKS-74U, he crossed into the Zone not as a soldier
+          or scientist, but as a man with nothing left to lose. Still green and learning the ropes, he’s a Rookie Stalker
+          with fire in his blood and death always one wrong step away.
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="label">Inventory</div>
+        <div class="inventory">
+          <div class="badge">AKS-74U</div>
+          <div class="badge">Geiger Counter</div>
+          <div class="badge">Artifact: Jellyfish</div>
+          <div class="badge">Gas Mask</div>
+          <div class="badge">Vodka Flask</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="label">Known Factions</div>
+        <div class="inventory">
+          <div class="badge">Neutral to Duty</div>
+          <div class="badge">Wary of Freedom</div>
+          <div class="badge">Hunted by Bandits</div>
+        </div>
+      </div>
+
+      <div class="links">
+        <a href="https://twitch.tv/CutieNiller" target="_blank">Twitch</a>
+        <a href="https://github.com/CutieNiller" target="_blank">GitHub</a>
+      </div>
+
+      <footer>
+        © 2025 STALKER Lore Project | Designed by CutieNiller
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
