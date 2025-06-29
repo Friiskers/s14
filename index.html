@@ -6,30 +6,14 @@
   <title>STALKER Profile – Grisha Lyonya</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', monospace;
+      color: #ddd;
+      background-color: black;
+    }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Orbitron', monospace;
-  color: #ddd;
-  background-color: black;
-  position: relative;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('https://wallpapers.com/images/hd/deserted-place-stalker-a1o2ysg85n1nf5iy.jpg') no-repeat center center fixed;
-  background-size: cover;
-  filter: brightness(0.4);
-  z-index: -1;
-}
     .card {
       max-width: 900px;
       width: 100%;
@@ -38,6 +22,7 @@ body::before {
       padding: 2rem;
       border-radius: 10px;
       box-shadow: 0 0 15px #7fbf7f;
+      margin: 0 auto;
     }
 
     h1 {
@@ -57,14 +42,6 @@ body::before {
       margin-bottom: 1.5rem;
     }
 
-    .overlay {
-  background-color: rgba(20, 20, 20, 0.85);
-  min-height: 100vh;
-  padding: 3rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
     .label {
       color: #888;
       font-weight: bold;
@@ -119,14 +96,43 @@ body::before {
       color: #666;
       text-align: center;
     }
+
+    .overlay {
+      background-color: rgba(20, 20, 20, 0.85);
+      min-height: 100vh;
+      padding: 3rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #music-toggle {
+      background:#7fbf7f; 
+      border:none; 
+      padding:0.5rem 1rem; 
+      font-family: 'Orbitron', monospace; 
+      font-weight:bold; 
+      color:#111; 
+      border-radius:5px; 
+      cursor:pointer; 
+      margin-bottom: 2rem;
+    }
   </style>
 </head>
 <body>
-  <audio autoplay loop>
-    <source src="https://kappa.vgmsite.com/soundtracks/s.t.a.l.k.e.r.-shadow-of-chernobyl-the-ultimate-edition-game-soundtrack/itqazrao/01%20-%20Amb01.mp3" type="audio/mpeg">
-  </audio>
 
   <div class="overlay">
+
+    <!-- Audio Element -->
+    <audio id="bg-music" loop>
+      <source src="https://kappa.vgmsite.com/soundtracks/s.t.a.l.k.e.r.-shadow-of-chernobyl-the-ultimate-edition-game-soundtrack/itqazrao/01%20-%20Amb01.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Play/Pause Button -->
+    <button id="music-toggle">► Play Music</button>
+
     <div class="card">
       <div class="portrait">
         <img src="https://media.printables.com/media/prints/938125/images/7170412_87147c9f-2d48-45c5-a7c1-e5ef1ea793c5_a8a8b44f-370e-4ad5-aedb-0a6bb9b467a3/thumbs/inside/1280x960/png/image_2024-07-09_151900497.webp" alt="Loner Patch" />
@@ -196,5 +202,20 @@ body::before {
       </footer>
     </div>
   </div>
+
+  <script>
+    const audio = document.getElementById('bg-music');
+    const btn = document.getElementById('music-toggle');
+
+    btn.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        btn.textContent = '❚❚ Pause Music';
+      } else {
+        audio.pause();
+        btn.textContent = '► Play Music';
+      }
+    });
+  </script>
 </body>
 </html>
