@@ -6,37 +6,30 @@
   <title>STALKER Profile – Grisha Lyonya</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Orbitron', monospace;
-      color: #ddd;
-      background-color: black;
-    }
 
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('https://wallpapers.com/images/hd/deserted-place-stalker-a1o2ysg85n1nf5iy.jpg') no-repeat center center fixed;
-      background-size: cover;
-      filter: brightness(0.4);
-      z-index: -1;
-    }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', monospace;
+  color: #ddd;
+  background-color: black;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
 
-    .overlay {
-      background-color: rgba(20, 20, 20, 0.85);
-      min-height: 100vh;
-      padding: 3rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://wallpapers.com/images/hd/deserted-place-stalker-a1o2ysg85n1nf5iy.jpg') no-repeat center center fixed;
+  background-size: cover;
+  filter: brightness(0.4);
+  z-index: -1;
+}
     .card {
       max-width: 900px;
       width: 100%;
@@ -64,6 +57,14 @@
       margin-bottom: 1.5rem;
     }
 
+    .overlay {
+  background-color: rgba(20, 20, 20, 0.85);
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
     .label {
       color: #888;
       font-weight: bold;
